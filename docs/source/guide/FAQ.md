@@ -14,25 +14,23 @@ This page describes the troubleshooting steps to take if you experience known pr
 
 ## Blank page when loading a project
 
-After starting Label Studio and opening a project, you see a blank page. Several possible issues could be the cause.
+After starting Label Studio and opening a project, you see a blank page. There are several reasons for the occurrence of this error. 
 
-### Cause: Host not recognized
+Cause: If you specify a host without a protocol such as `http://` or `https://` when starting Label Studio, Label Studio can fail to locate the correct files to load the project page. 
 
-If you specify a host without a protocol such as `http://` or `https://` when starting Label Studio, Label Studio can fail to locate the correct files to load the project page. 
-
-To resolve this issue, update the host specified as an environment variable or when starting Label Studio. For more information, see [Start Label Studio](start.html).
+Resolution: Update the host specified as an environment variable or when starting Label Studio. For more information, see [Start Label Studio](start.html).
 
 
 ## Slowness while labeling
 
 If you are using the SQLite database and another user imports a large volume of data, labeling might slow down for other users on the server due to the database load. 
 
-If you want to upload a large volume of data (thousands of items), consider doing that at a time when people are not labeling or use a different database backend such as PostgreSQL or Redis. You can run Docker Compose from the root directory of Label Studio to use PostgreSQL: `docker-compose up -d` or for more information, see [Sync data from cloud or database storage](storage.html). 
+If you want to upload a large volume of data (thousands of items), consider doing that at a time when users are not labeling or use a different database backend such as PostgreSQL or Redis. You can run Docker Compose from the root directory of Label Studio to use PostgreSQL: `docker-compose up -d` or for more information, see [Sync data from cloud or database storage](storage.html). 
 
 
 ## Image/audio/resource loading error while labeling
 
-The most common mistake while resource loading is Cross-Origin Resource Sharing <b>CORS</b> problem or Cross Domain. When you are trying to fetch a picture from external hosting it could be blocked by security reasons. Go to browser console (`Ctrl + Shift + i` for Chrome) and check errors there. Typically, this problem is solved by the external host setup.
+The most common mistake while resource loading is Cross-Origin Resource Sharing (CORS) problem or Cross Domain. When you are trying to fetch a picture from external hosting it could be blocked by security reasons. Go to browser console (`Ctrl + Shift + i` for Chrome) and check errors there. Typically, this problem is solved by the external host setup.
 
 <br>
 <center>
