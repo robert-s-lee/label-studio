@@ -11,8 +11,6 @@ DATABASES = {'default': DATABASES_ALL[DJANGO_DB]}
 MIDDLEWARE.append('organizations.middleware.DummyGetSessionMiddleware')
 MIDDLEWARE.append('core.middleware.UpdateLastActivityMiddleware')
 
-X_FRAME_OPTIONS = 'allow-from *'
-
 ADD_DEFAULT_ML_BACKENDS = False
 
 LOGGING['root']['level'] = get_env('LOG_LEVEL', 'WARNING')

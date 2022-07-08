@@ -371,6 +371,8 @@ CSRF_COOKIE_HTTPONLY = bool(int(get_env('CSRF_COOKIE_HTTPONLY', SESSION_COOKIE_S
 
 SSRF_PROTECTION_ENABLED = get_bool_env('SSRF_PROTECTION_ENABLED', False)
 
+X_FRAME_OPTIONS = get_env('X_FRAME_OPTIONS', 'DENY')  # deny | sameorgin | allow-from *
+
 # user media files
 MEDIA_ROOT = os.path.join(BASE_DATA_DIR, 'media')
 os.makedirs(MEDIA_ROOT, exist_ok=True)
