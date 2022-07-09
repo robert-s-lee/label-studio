@@ -371,7 +371,8 @@ CSRF_COOKIE_HTTPONLY = bool(int(get_env('CSRF_COOKIE_HTTPONLY', SESSION_COOKIE_S
 
 SSRF_PROTECTION_ENABLED = get_bool_env('SSRF_PROTECTION_ENABLED', False)
 
-X_FRAME_OPTIONS = get_env('X_FRAME_OPTIONS', 'DENY')  # deny | sameorgin | allow-from *
+# Running inside iframe requires 'sameorigin' see https://docs.djangoproject.com/en/4.0/ref/clickjacking/
+X_FRAME_OPTIONS = get_env('X_FRAME_OPTIONS', 'DENY')  # deny | sameorgin
 
 # user media files
 MEDIA_ROOT = os.path.join(BASE_DATA_DIR, 'media')
@@ -411,7 +412,6 @@ ENABLE_LOCAL_FILES_STORAGE = get_bool_env('ENABLE_LOCAL_FILES_STORAGE', default=
 LOCAL_FILES_SERVING_ENABLED = get_bool_env('LOCAL_FILES_SERVING_ENABLED', default=False)
 LOCAL_FILES_DOCUMENT_ROOT = get_env('LOCAL_FILES_DOCUMENT_ROOT', default=os.path.abspath(os.sep))
 
-# running in iframe requires 'allow-from *' see https://docs.djangoproject.com/en/4.0/ref/clickjacking/
 X_FRAME_OPTIONS = get_env('X_FRAME_OPTIONS', default='DENY') # 'DENY' | 'SAMEORIGIN' | 'allow-from *'
 
 SYNC_ON_TARGET_STORAGE_CREATION = get_bool_env('SYNC_ON_TARGET_STORAGE_CREATION', default=True)
