@@ -1,6 +1,6 @@
 {
-  "message": "fix: DEV-2170: on project open number of tasks defined by task per page is being displayed",
-  "commit": "20a6002a5a6f122cafcb248514ea0b047a9adf14",
-  "branch": "fb-dev-2170",
-  "date": "2022-06-06T20:55:36Z"
+  "message": "fix: DEV-2519: Choices selected by default",
+  "commit": "dc03b7337518a3129677570127b44456420d4c6c",
+  "branch": "master",
+  "date": "2022/08/10 15:51:21"
 }

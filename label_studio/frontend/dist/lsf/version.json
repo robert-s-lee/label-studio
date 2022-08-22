@@ -1,6 +1,6 @@
 {
-  "message": "fix: DEV-2777: remove lookbehind in regex for Safari (#730)",
-  "commit": "ebb08ce18fbc7bd557497b5d26ef8cbc9600eb40",
+  "message": "fix: DEV-3101: Fix sving text for paragraph regions (#811)\n\nFix sving text for paragraph regions",
+  "commit": "bcb5a01a50f880b8109445173ca2a6dcab92b923",
   "branch": "master",
-  "date": "2022-07-01T16:44:40Z"
+  "date": "2022-08-18T12:24:33Z"
 }
